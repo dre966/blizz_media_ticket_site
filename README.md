@@ -1,7 +1,7 @@
 ## Blizz Media Ticket Site
 
 A fully functional ticket sales solution built with HTML, CSS and JavaScript.
-This project consits of two **websites**  that allows to [users](https://blizzticky-buy.web.app/) to purchase and [view](https://blizzticky-getyours.netlify.app/) Blizz Media Event Tickets
+This project consits of two **websites**  that allows to users to [purchase](https://blizzticky-buy.web.app/) and [view](https://blizzticky-getyours.netlify.app/) Blizz Media Event Tickets
 
 ---
 ## Features 
