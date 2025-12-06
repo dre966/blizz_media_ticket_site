@@ -1,0 +1,7 @@
+netlify.toml
+.env
+node_modules/
+.netlify/
+netlify/
+.vscode/
+dist/

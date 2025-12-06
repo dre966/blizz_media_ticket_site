@@ -1,0 +1,21 @@
+{
+  "name": "buyer_site",
+  "version": "1.0.0",
+  "main": "paystack.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "author": "Lemuel Quaye",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "rollup-plugin-javascript-obfuscator": "^1.0.1",
+    "vite": "^7.0.6"
+  },
+  "dependencies": {
+    "@paystack/inline-js": "^2.22.7",
+    "dotenv": "^17.2.1"
+  }
+}

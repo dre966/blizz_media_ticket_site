@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tcket_Generator</title>
+    <link id="style" rel="stylesheet" href="regular.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+      <header>
+        <!-- Navigation Bar -->
+        <nav>
+            <div class="logo">
+                <img src="./assets/Log_Header.png" width="50px" height="auto" alt="Blizz Media Logo"> Blizz Media™
+            </div>
+            <!-- Hamburger Menu -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <i class="fas fa-bars"></i>
+            </label>
+            <!-- Navigation Links -->
+            <ul class="menu">
+                <li><a href='https://blizzticky-buy.web.app'>Buy Your Ticket</a></li>
+                <li><a href="https://blizzticky-getyours.netlify.app">Get Your Ticket</a></li>
+            </ul>
+        </nav>
+    </header>
+  <!-- ── POPUP MODAL ───────────────────────── -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <div id="popup-icon" class="popup-icon"></div>
+      <p id="popup-message"></p>
+    </div>
+  </div>
+
+  <!-- ── TOP CONTROLS ─────────────────── -->
+  <div class="control_panel">
+    <div class="control_left">
+      <div class="heading">
+        <h1>Get Your <br />Blizz Media <br />Event Tickets</h1>
+      </div>
+      <div id="payment-info"></div>
+    </div>
+    <div class="control_right">
+      <input type="text" id="ref" placeholder="Enter payment ref…" />
+      <button id="generate-ticket">Get Ticket</button>
+      <button id="download-ticket">Download Ticket</button>
+<button id="download-pdf">Download PDF</button>
+
+    </div>
+  </div>
+
+  <!-- ── TICKET PREVIEW ───────────────── -->
+  <div class="preview"> 
+    <div id="ticketBox">
+    <div class="qrContainer">
+  <div id="qrcode"></div>
+</div>
+
+      <div class="Info_Space">
+        <p id="code">Code</p>
+        <h2 id="name">Holder Name</h2>
+        <div id="number">Buyer Number</div>
+        <div id="email">holderemail@gmail.com</div>
+        <div class="venue">Akroma Plaza</div>
+        <div class="venue">24th October 2025, 6:00PM</div>
+        <p id="tictype">REGULAR</p>
+        <p id="purch">Purchased at …</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script src="./scripts/crypto-js.js"></script>
+<script src="./scripts/qrcode.min.js"></script>
+<script src="./scripts/jspdf.umd.min.js"></script>
+<script src="./scripts/html2canvas.min.js"></script>
+<script type="module" src="./scripts/paystack.js"></script>
+</html>

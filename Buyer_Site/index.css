@@ -1,0 +1,389 @@
+@font-face {
+  font-family: 'Radjhani';
+  src: url(Font_Faces/Rajdhani-Bold.ttf);
+}
+
+:root {
+  --bg-gradient: linear-gradient(135deg, #0f0f0f, #1f1f1f);
+  --card-bg: rgba(255,255,255,0.05);
+  --card-border: rgba(255,255,255,0.15);
+  --accent-white: #ffffff;
+  --accent-dark: rgb(77, 77, 77);
+  --text-light: #ececec;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation Bar */
+header {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  margin-bottom: 20px;
+  z-index: 3;
+}
+
+nav {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.logo {
+  color: #ffffff;
+  font-family: 'Radjhani';
+  font-size: 24px;
+  position: relative;
+  top: -12px;
+}
+
+.logo img {
+  position: relative;
+  top: 15px;
+}
+
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li a {
+  color: #ffffff;
+  font-family: 'Radjhani';
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: var(--accent-dark); /* Change to your desired hover color */
+}
+
+.menu li a::after {
+  content: "";
+  display: flex;
+  width: 0;
+  height: 2px;
+  background: var(--accent-dark); /* Match the hover color */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.menu li a:hover::after {
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+
+}
+
+.hamburger i {
+  font-size: 28px;
+  color: #fff;
+}
+
+#menu-toggle {
+  display: none;
+  
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.control-panel {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+  margin-top: 90px;
+  width: 100%;
+  max-width: 420px;
+  padding: 2rem;
+}
+
+/* IMAGE PLACEHOLDER */
+.image-placeholder {
+  width: 100%;
+  height: 180px;
+  background: url(./Blizz_Backdrop.png);
+  background-size: cover;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px dashed rgba(255,255,255,0.3);
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+
+.heading h1 {
+  text-align: center;
+  font-family: 'Radjhani';
+  font-size: 2rem;
+  font-weight: 200;
+  margin-bottom: 1.5rem;
+  color: var(--accent-white);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--text-light);
+}
+
+input[type="email"],
+input[type="tel"],
+input[type="text"],
+input[readonly] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+  color: var(--text-light);
+  font-size: 1rem;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent-white);
+  background: rgba(255,255,255,0.15);
+}
+
+select{
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+  color: var(--text-light);
+  font-size: 1rem;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+option{
+  color: #1f1f1f;
+}
+
+.checkbox_group {
+  display: flex;
+  gap: 1rem;
+}
+
+.checkbox_group label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 500;
+}
+
+input[type="radio"] {
+  accent-color: var(--accent-dark);
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.btn-pay {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--accent-white);
+  color: #0f0f0f;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-pay:hover {
+  background: rgba(255,255,255,0.8);
+  transform: translateY(-2px);
+}
+
+/* MODAL STYLES */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  align-items: center;            /* centers vertically */
+  justify-content: center;        /* centers horizontally */
+  background: rgba(0, 0, 0, 0.7); /* dark overlay */
+  z-index: 999;
+  display: none;
+}
+
+.modal-content {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  padding: 2rem;
+  width: 90%;
+  max-width: 360px;
+  text-align: center;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.6);
+}
+
+.modal-content h2 {
+  color: var(--accent-white);
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+.modal-content a{
+  color: #ffffff;
+  font-family: 'Radjhani';
+  text-decoration: none;
+  font-style: italic;
+  font-size: 18px;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.modal-content a:hover{
+  color: var(--accent-dark); /* Change to your desired hover color */
+}
+
+.modal-content a::after{
+  content: "";
+  display: flex;
+  width: 0;
+  height: 2px;
+  background: var(--accent-dark); /* Match the hover color */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.modal-content a:hover::after{
+  width: 100%;
+}
+
+.modal-img{
+  height: 200px;
+  justify-self: center;
+  align-self: center;
+}
+.ref-box {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.copy-button {
+  background: var(--accent-white);
+  color: #0f0f0f;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.copy-button:hover {
+  background: rgba(255,255,255,0.8);
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem; right: 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+  .menu {
+    position: absolute;
+    top: 78px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+    flex-direction: column; /* Flex direction row */
+    align-items: center;
+    justify-content: space-around;
+    display: none;
+    padding: 10px 0;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+
+  .menu li a {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  #menu-toggle:checked + .hamburger + .menu {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .menu li a {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .hamburger i {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+  .control-panel { padding: 1.5rem; }
+  .heading h1 { font-size: 1.6rem; }
+  .btn-pay { font-size: 1rem; }
+}
