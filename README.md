@@ -17,7 +17,7 @@ This project consits of two **websites**  that allows to [users](https://blizzti
 ---
 ### Website 2 - [blizzticky-getyours.netlify.app](https://blizzticky-buy.web.app/) (Viewing Website)
 [^1]![](./screenshots/get.png) 
-[^2]![]./screenshots/(get1.png)
+[^2]![](./screenshots/(get1.png)
 [^3]![](./screenshots/get3.png)
 [^4]![](./screenshots/get4.png)
 [^5]![](./screenshots/get5.png)
